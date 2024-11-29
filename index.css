@@ -1,0 +1,44 @@
+/* Reset margin dan padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Pastikan body memenuhi tinggi layar */
+    display: grid; /* Gunakan grid untuk layout */
+    place-items: center; /* Pusatkan konten */
+    background-color: #000; /* Background untuk menutupi area kosong */
+    box-sizing: border-box;
+  }
+  
+  /* Container untuk gambar GIF */
+  .gif-container {
+    display: grid; /* Gunakan grid */
+    place-items: center; /* Pusatkan gambar */
+    width: 100%; /* Lebar penuh layar */
+    height: 100%; /* Tinggi penuh layar */
+  }
+  
+  /* Styling gambar */
+  .gif-container img {
+    max-width: 50%; /* Gambar maksimal setengah dari lebar layar (di laptop) */
+    max-height: 50%; /* Sesuaikan tinggi */
+    width: auto; /* Menjaga proporsi asli */
+    height: auto; /* Menjaga proporsi asli */
+    transition: all 0.3s ease-in-out; /* Tambahkan animasi perubahan ukuran */
+  }
+  
+  /* Media query untuk layar kecil (HP atau tablet) */
+  @media (max-width: 768px) {
+    .gif-container img {
+      max-width: 70%; /* Lebih kecil di HP */
+      max-height: 70%; /* Sesuaikan tinggi */
+    }
+  }
+  
+  /* Media query untuk layar lebih besar (desktop atau laptop) */
+  @media (min-width: 1024px) {
+    .gif-container img {
+      max-width: 30%; /* Lebih kecil lagi di laptop */
+      max-height: 30%; /* Sesuaikan tinggi */
+    }
+  }
+  
